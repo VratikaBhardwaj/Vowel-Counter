@@ -1,0 +1,17 @@
+Explaination of JavaScript Code
+
+var vowelCount = document.getElementById('vowelCount'): This line retrieves the HTML element with the ID 'vowelCount' and stores it in the variable vowelCount. The assumption is that there is an HTML element (e.g., a <span>, <div>, etc.) with the ID 'vowelCount' where the vowel count will be displayed.
+
+The function countVowel(str) takes a single parameter str, which represents the input string to be processed.
+
+str = str.toLowerCase();: This line converts the input string str to lowercase. This is done to make the vowel count case-insensitive, meaning both uppercase and lowercase vowels will be counted.
+
+let vowArr = ['a', 'e', 'i', 'o', 'u'], counter = 0;: This line declares an array vowArr that contains all the vowels (in lowercase) and initializes the counter variable to zero, which will be used to store the number of vowels found in the input string.
+
+The next part is a for...of loop that iterates over each character (letter) in the input string str.
+
+if (vowArr.includes(letter)) { ... }: Inside the loop, it checks if the current letter (character) letter is present in the vowArr array. If it's a vowel, it increments the counter variable by one and adds the 'blink' class to the vowelCount element.
+
+else { ... }: If the current letter is not a vowel, it removes the 'blink' class from the vowelCount element.
+
+After the loop finishes, the vowelCount.innerHTML is set to the value of the counter, which represents the total count of vowels in the input string.
